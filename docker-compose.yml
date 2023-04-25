@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: react-admin
+    image: admin-i
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/share/nginx/html
+    working_dir: /usr/share/nginx/html
+    command: "npm start"  
